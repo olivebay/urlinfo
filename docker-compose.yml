@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  urlinfo-api:
+    build: '.'
+    environment: 
+      - MONGO_DIAL=mongodb://mongodb:27017
+    ports:
+      - '9090:9090'
+    depends_on:
+      - 'mongodb'
+  mongodb:
+    image: 'mongo:latest'
+    container_name: 'mongodb'
+    environment:
+      - MONGO_INITDB_DATABASE=urls
+    volumes: 
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+    ports:
+      - '27100:27017'
+    

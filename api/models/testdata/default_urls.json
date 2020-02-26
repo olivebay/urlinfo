@@ -1,0 +1,6 @@
+[
+    {
+        "domain": "nsgs-gov.com",
+        "blacklists": ["vault", "spamHaus"]
+    }
+]
