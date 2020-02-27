@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/olivebay/urlinfo.svg?branch=master)](https://travis-ci.com/olivebay/urlinfo)
+
 # urlinfo-api
 
 The urlinfo API is a service written in Go that lets your client applications check if a URL is included on any of the urlinfo lists.
