@@ -33,7 +33,7 @@ deploy_app:
 		@echo "Deploying urlinfo application.."
 		@echo ""
 		kubectl apply -f https://raw.githubusercontent.com/olivebay/urlinfo/master/kubernetes/deployment.yml
-		watch -n1 "kubectl get pods -o wide"
+		watch -n1 "kubectl get pods -A -o wide"
 
 loadstart:
 		@echo "Starting load test.."
