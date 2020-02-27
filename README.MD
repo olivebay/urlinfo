@@ -54,8 +54,8 @@ If no results match your request, you will get an 404 with a `url not found`:
 # Deployment
 
 The urlinfo API can be deployed:
-- In the [local machine](https://github.com/olivebay/urlinfo/blob/master/README.md#localhost-deployment) using Docker Compose   
-- In a [Kubernetes K3s cluster](https://github.com/olivebay/urlinfo/blob/master/README.md#kubernetes-deployment)   
+- In the [local machine](https://github.com/olivebay/urlinfo#local-machine-deployment-with-docker-compose) using Docker Compose   
+- In a [Kubernetes K3s cluster](https://github.com/olivebay/urlinfo#kubernetes-deployment-on-k3s)   
 
 
 ## Local machine Deployment with Docker Compose
