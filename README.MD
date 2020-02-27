@@ -8,8 +8,8 @@ The repository is configured with TravisCI to test the application code and then
 ### Features
 
 - It relies on MongoDB for data storage running in a container  
-- Initial data is seeded to MongoDB upon initialization to test the API
-- [Gorilla Mux](https://github.com/gorilla/mux) was used for routing   
+- MongoDB is initialised with sample data used to test the API
+- [Gorilla Mux](https://github.com/gorilla/mux) is used for routing   
 
 
 ## Endpoints
@@ -26,7 +26,7 @@ For example:
 curl  localhost:9090/urlinfo/1/domain.com
 ```
 
-You should receive a JSON response similar to the following:
+Upon successful match a JSON response is returned similar to the following:
 
 ```
 {
@@ -53,29 +53,36 @@ If no results match your request, you will get an 404 with a `url not found`
 
 The urlinfo API can be deployed:
 - In the [local machine](https://github.com/olivebay/urlinfo/blob/master/README.md#localhost-deployment) using Docker Compose   
-- In a [Kubernetes k3s cluster](https://github.com/olivebay/urlinfo/blob/master/README.md#kubernetes-deployment)   
+- In a [Kubernetes K3s cluster](https://github.com/olivebay/urlinfo/blob/master/README.md#kubernetes-deployment)   
 
 
-## Localhost Deployment with Docker Compose
+## Local machine Deployment with Docker Compose
 
 **Requirements**
 
 - Docker 
 - Docker Compose 
 
-Starting services
+**Get the repository**
+
+```
+git clone git@github.com:olivebay/urlinfo.git
+cd urlinfo/
+```
+
+Starting services:
 
 ```
 docker-compose up -d
 ```
 
-Stoping services
+Stoping services:
 
 ```
 docker-compose stop
 ```
 
-To test the API run the following
+To test the API run the following:
 
 ```
 curl localhost:9090/urlinfo/1/domain.com

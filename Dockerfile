@@ -6,7 +6,6 @@ COPY . /github.com/olivebay/urlinfo/
 RUN go mod download
 RUN CGO_ENABLED=0 go build -o urlinfo-api
 
-
 FROM scratch
 WORKDIR /app
 COPY --from=build /github.com/olivebay/urlinfo/urlinfo-api /app/
