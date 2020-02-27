@@ -41,7 +41,7 @@ Upon successful match a JSON response is returned similar to the following:
 }
 ```
 
-If no results match your request, you will get an 404 with a `url not found`
+If no results match your request, you will get an 404 with a `url not found`:
 
 ```
 {
