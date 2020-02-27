@@ -2,7 +2,7 @@
 
 The urlinfo API is a service written in Go that lets your client applications check if a URL is included on any of the urlinfo lists.
 
-The repository is configured with CircleCI to test the application code and then push the docker image to Docker Hub.
+The repository is configured with TravisCI to test the application code and then push the docker image to Docker Hub.
 
 
 ### Features
