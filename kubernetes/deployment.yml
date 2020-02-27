@@ -108,7 +108,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: urlinfo
+  name: apisvc
 spec:
   ports:
   - port: 80
