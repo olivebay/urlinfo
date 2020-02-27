@@ -1,0 +1,30 @@
+language: go
+
+go:
+- "1.13.x"
+
+services:
+ - docker
+
+# Go module mode
+env:
+- GO111MODULE=on
+
+# Download the go modules
+install:
+- go mod download
+
+jobs:
+  include:
+  - stage: test
+    script:
+    - go test -v ./...
+  
+  - stage: build and push docker image
+    script:
+    - docker build -t melibou/urlinfo:latest -t melibou/urlinfo:$COMMIT .
+ 
+after_script:
+- docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+- docker push melibou/urlinfo:latest
+- docker push melibou/urlinfo:$COMMIT
