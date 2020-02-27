@@ -115,7 +115,7 @@ To install K3s and deploy the urlinfo application on the K3s cluster:
 make all
 ```
 
-To test the API endpoint run: 
+To test the API endpoint run:
 
 ```
 make test
