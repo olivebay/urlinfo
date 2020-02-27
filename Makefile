@@ -21,7 +21,7 @@ k3s_install:
 		@echo ""
 		@echo "Installing K3s.."
 		@echo ""
-		curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s -
+		curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s - && sleep 30
 		@echo ""
 
 destroy_cluster:
