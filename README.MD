@@ -63,7 +63,7 @@ The urlinfo API can be deployed:
 **Requirements**
 
 - Docker 
-- Docker Compose 
+- Docker Compose
 
 **Get the repository**
 
