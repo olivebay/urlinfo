@@ -68,7 +68,7 @@ The urlinfo API can be deployed:
 **Get the repository**
 
 ```
-git clone git@github.com:olivebay/urlinfo.git
+git clone https://github.com/olivebay/urlinfo.git 
 cd urlinfo/
 ```
 
@@ -95,13 +95,14 @@ curl localhost:9090/urlinfo/1/domain.com
 **Requirements**
 
 - A clean installation of a [Vagrant](https://www.vagrantup.com/downloads.html) box built with `ubuntu/xenial64`  
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)  
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- `Make` needs to be installed
 
 
 **Get the repository**
 
 ```
-git clone git@github.com:olivebay/urlinfo.git
+git clone https://github.com/olivebay/urlinfo.git 
 cd urlinfo/
 ```
 
@@ -114,6 +115,8 @@ To install K3s and deploy the urlinfo application on the K3s cluster:
 ```
 make all
 ```
+
+Note: Infrastructure and application should be up and running in less than 3 minutes.
 
 To test the API endpoint run:
 

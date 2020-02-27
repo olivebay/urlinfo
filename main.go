@@ -15,11 +15,8 @@ import (
 	"github.com/olivebay/urlinfo/api/handlers"
 )
 
-// Parse the configuration file 'config.toml', and establish a connection to DB
-
 func main() {
 
-	// todo maybe add a common config file
 	var (
 		bindAddress = flag.String("addr", ":9090", "endpoint address")
 	)
@@ -33,15 +30,13 @@ func main() {
 
 	// create a new serve mux and register the handlers
 	r := mux.NewRouter().SkipClean(true).UseEncodedPath()
-	r.Use(MongoHandler) // 
+	r.Use(MongoHandler)
 	r.Use(mux.CORSMethodMiddleware(r)) // CORS middleware
 
 	// handlers for API
 	r.HandleFunc("/healthz", handlers.StatusHandler)
 	api := r.PathPrefix(`/urlinfo/1/`).Subrouter()
 	api.HandleFunc(`/{url:.+}`, handlers.GetURL).Methods("Get", "Head")
-
-	// TODO update database
 
 	// create a new server
 	srv := http.Server{
